@@ -1,19 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from "./pages/HomePage";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
+import Contact from "./pages/ContactPage";
+import Gallery from "./pages/GalleryPage";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer";
 
 function App() {
   return (
       <Router>
       <Navbar/>
-      <Sidebar/>
       <Switch>
           <Route path="/" exact component={Home}/>
+          <Route path="/contact" exact component={Contact}/>
+          <Route path="/gallery" exact component={Gallery}/>
       </Switch>
           <Footer/>
     </Router>

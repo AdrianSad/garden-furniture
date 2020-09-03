@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Sidebar = () => {
+const GalleryPage = () => {
     return (
         <div>
-            sidebar
+            galeria
         </div>
     );
 };
 
-export default Sidebar;
+export default GalleryPage;

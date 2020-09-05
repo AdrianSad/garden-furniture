@@ -24,12 +24,12 @@ display: flex;
 flex-flow: row nowrap;
 
 li{
-  padding: 2rem 1rem;
+  padding: 1.75rem 1rem;
 }
 
 .link{
   text-decoration: none;
-  color: var(--mainBlack);
+  color: var(--mainWhite);
 }
 
 @media (max-width: 768px) {

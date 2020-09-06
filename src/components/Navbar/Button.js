@@ -6,6 +6,10 @@ const Button = () => {
 
     const [open, setOpen] = useState(false);
 
+    const closeBar = () => {
+        setOpen(false);
+    }
+
     return (
         <>
             <ButtonWrapper className="nav-btn" open={open} onClick={() => setOpen(!open)}>
@@ -13,7 +17,7 @@ const Button = () => {
                 <div/>
                 <div/>
             </ButtonWrapper>
-            <RightNav open={open}/>
+            <RightNav open={open} closeBar={closeBar}/>
         </>
     );
 };

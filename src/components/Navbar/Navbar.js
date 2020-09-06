@@ -3,6 +3,7 @@ import Button from "./Button";
 import styled from "styled-components";
 
 const Navbar = () => {
+
     return (
         <NavbarWrapper>
             <div className="logo">
@@ -27,7 +28,7 @@ const NavbarWrapper = styled.nav`
   justify-content: space-between;
 
   .logo{
-    text-shadow: 1px 1px 5px var(--mainBlack);
+    text-shadow: 1px 1px var(--mainBlack);
     padding: 1.5rem 0;
     font-size: 1.5rem;
   }

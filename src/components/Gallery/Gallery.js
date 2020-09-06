@@ -69,6 +69,12 @@ img{
     transform: scale(2);
   }
     
+  @media (max-width: 768px){
+    &:hover {
+      z-index: 2;
+      transform: scale(3);
+    }
+  }
 }
 `;
 

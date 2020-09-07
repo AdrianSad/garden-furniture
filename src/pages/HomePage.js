@@ -7,6 +7,7 @@ import Gallery from "../components/Gallery/Gallery";
 import styled from "styled-components";
 
 const HomePage = () => {
+
     return (
         <>
             <PageImage img={swingIMG} max/>

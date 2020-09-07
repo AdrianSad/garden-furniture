@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Title = ({text}) => {
+const Title = ({text, desc}) => {
     return (
         <TitleWrapper>
             <h1 className="text-main text-title">{text}</h1>
+            <p>{desc}</p>
             <hr/>
         </TitleWrapper>
     );

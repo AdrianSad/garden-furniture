@@ -1,30 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
-import image1 from "../../images/1.jpg"
-import image2 from "../../images/2.jpg"
-import image3 from "../../images/3.jpg"
-import image4 from "../../images/4.jpg"
-import image5 from "../../images/5.jpg"
-import image6 from "../../images/6.jpg"
-import image7 from "../../images/7.jpg"
-import image8 from "../../images/8.jpg"
-import image9 from "../../images/9.jpg"
-import image10 from "../../images/10.jpg"
 
 const Gallery = () => {
+
+    const createImage = (index, options = {}) => (
+            <img src={`../images/${index}.jpg`} key={index} alt="home page gallery picture"/>
+    )
+
     return (
         <GalleryWrapper>
             <div className="gallery">
-                <img src={image1} alt=""/>
-                <img src={image2} alt=""/>
-                <img src={image3} alt=""/>
-                <img src={image4} alt=""/>
-                <img src={image5} alt=""/>
-                <img src={image6} alt=""/>
-                <img src={image7} alt=""/>
-                <img src={image8} alt=""/>
-                <img src={image9} alt=""/>
-                <img src={image10} alt=""/>
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(createImage)};
             </div>
         </GalleryWrapper>
     );

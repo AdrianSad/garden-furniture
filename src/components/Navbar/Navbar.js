@@ -1,13 +1,14 @@
 import React from 'react';
 import Button from "./Button";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
 
     return (
         <NavbarWrapper>
             <div className="logo">
-                <p className="text-title text-main">Meble ogrodowe</p>
+                <Link to="/" className="text-title text-main text-logo">Meble ogrodowe</Link>
             </div>
             <Button/>
         </NavbarWrapper>
@@ -31,6 +32,14 @@ const NavbarWrapper = styled.nav`
     text-shadow: 1px 1px var(--mainBlack);
     padding: 1.5rem 0;
     font-size: 1.5rem;
+  }
+  
+  .text-logo{
+    text-decoration: none;
+    color: var(--primaryColor);
+    &:hover{
+        text-decoration: none;
+    }
   }
   
   

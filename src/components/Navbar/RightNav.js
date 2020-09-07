@@ -39,8 +39,12 @@ animation: animateright 0.4s;
 .link{
   display: block;
   padding: 1.75rem 1rem;
-  text-decoration: none;
   color: var(--mainWhite);
+  text-shadow: 1px 1px var(--mainBlack);
+  
+  &:hover, &:active{
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 768px) {

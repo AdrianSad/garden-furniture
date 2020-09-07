@@ -2,9 +2,12 @@ import React from 'react';
 import styled from "styled-components";
 import {FaMapMarkerAlt, FaPhone, FaFacebook, FaUser} from "react-icons/all";
 import Map from "./Map/Map";
+import Title from "./Title";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
     return (
+        <>
         <PageWrapper>
             <MapWrapper>
                 <Map/>
@@ -43,10 +46,12 @@ const Contact = () => {
                             <p>imię nazwisko</p>
                         </div>
                     </div>
-
                 </div>
             </ContactWrapper>
         </PageWrapper>
+
+            <ContactForm/>
+    </>
     );
 };
 

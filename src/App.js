@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-image-lightbox/style.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from "./pages/HomePage";
 import Contact from "./pages/ContactPage";

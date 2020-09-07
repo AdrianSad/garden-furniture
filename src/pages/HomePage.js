@@ -11,11 +11,12 @@ const HomePage = () => {
     return (
         <>
             <PageImage img={swingIMG} max="true"/>
-            <MapWrapper>
-            <Map/>
-            </MapWrapper>
             <Title text="Nasze Wyroby"/>
             <Gallery/>
+            <Title text="Lokalizacja"/>
+            <MapWrapper>
+                <Map/>
+            </MapWrapper>
         </>
     );
 };

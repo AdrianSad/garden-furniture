@@ -2,10 +2,10 @@ import React from 'react';
 import styled from "styled-components";
 import {Link} from "react-router-dom";
 
-const RightNav = ({open, closeBar}) => {
+const RightNav = ({fixed, open, closeBar}) => {
 
     return (
-        <ItemsWrapper open={open}>
+        <ItemsWrapper fixed={fixed} open={open}>
             <li>
                 <Link className="link" to="/" onClick={closeBar}>Strona Główna</Link>
             </li>
@@ -39,8 +39,9 @@ animation: animateright 0.4s;
 .link{
   display: block;
   padding: 1.75rem 1rem;
-  color: var(--mainWhite);
-  text-shadow: 1px 1px var(--mainBlack);
+  color: ${props => props.fixed ? "var(--primaryColor)" : "var(--mainWhite)"};
+  font-weight: bold;
+  text-shadow: ${props => props.fixed ? "none" : "1px 1px var(--mainBlack)"};
   
   &:hover, &:active{
     text-decoration: none;

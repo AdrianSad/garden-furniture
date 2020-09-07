@@ -1,18 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
+import Lightbox from "react-image-lightbox";
 
 const Gallery = () => {
 
+    const [open, setOpen] = useState(false);
+    const [id, setId] = useState(0);
+
     const createImage = (index, options = {}) => (
-            <img src={`../images/${index}.jpg`} key={index} alt="home page gallery"/>
+        <img src={`../images/${index}.jpg`} key={index} alt="home page gallery" onClick={() => {
+            setOpen(true);
+            setId(index);
+        }}/>
     )
 
     return (
-        <GalleryWrapper>
-            <div className="gallery">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(createImage)};
-            </div>
-        </GalleryWrapper>
+        <>
+            {open && <Lightbox
+                mainSrc={`../images/${id}.jpg`}
+                enableZoom={false}
+                onCloseRequest={() => setOpen(false)}
+            />}
+            <GalleryWrapper>
+                <div className="gallery">
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(createImage)};
+                </div>
+            </GalleryWrapper>
+        </>
     );
 };
 
@@ -45,6 +59,7 @@ img{
     0% 50%);
   transform: scale(1);
   transition: all .25s;
+  cursor: pointer;
   
   &:nth-child(7n+1){
     grid-column: 2 / span 2;

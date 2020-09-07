@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styled from "styled-components";
 import RightNav from "./RightNav";
 
-const Button = () => {
+const Button = ({fixed}) => {
 
     const [open, setOpen] = useState(false);
 
@@ -17,7 +17,7 @@ const Button = () => {
                 <div/>
                 <div/>
             </ButtonWrapper>
-            <RightNav open={open} closeBar={closeBar}/>
+            <RightNav fixed={fixed} open={open} closeBar={closeBar}/>
         </>
     );
 };

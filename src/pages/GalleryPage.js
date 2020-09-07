@@ -83,7 +83,7 @@ const GalleryPage = () => {
         <GalleryWrapper>
             <div className="container-fluid">
 
-                <div className="row">
+                <div className="row gallery-carousel">
                     <Carousel infiniteLoop
                               showThumbs={false}
                               stopOnHover={true}
@@ -91,7 +91,7 @@ const GalleryPage = () => {
                               interval={2000}
                               autoPlay={true}
                               dynamicHeight={true}
-                              centerSlidePercentage={35}
+                              centerSlidePercentage={window.screen.width > 768 ? 35 : 80}
                               emulateTouch={true}
                               swipeable={true}
                               showArrows={true}>

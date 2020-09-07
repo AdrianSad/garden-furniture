@@ -25,6 +25,8 @@ color: var(--primaryColor);
 
 .pin-text {
   font-size: 1.3em;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 `;
 

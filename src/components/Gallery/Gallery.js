@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Gallery = () => {
 
     const createImage = (index, options = {}) => (
-            <img src={`../images/${index}.jpg`} key={index} alt="home page gallery picture"/>
+            <img src={`../images/${index}.jpg`} key={index} alt="home page gallery"/>
     )
 
     return (

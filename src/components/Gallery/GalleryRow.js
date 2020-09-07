@@ -6,7 +6,7 @@ const GalleryRow = ({arr}) => {
             <div className="row">
                 {arr.map((item, index) => {
                     return <div className="col-12 col-md-6 col-sm-12 col-lg-3 zoom" key={index}>
-                        <img src={item} alt="gallery page picture"/>
+                        <img src={item} alt="gallery page"/>
                     </div>
                 })}
             </div>

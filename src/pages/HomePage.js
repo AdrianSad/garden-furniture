@@ -10,7 +10,7 @@ const HomePage = () => {
 
     return (
         <>
-            <PageImage img={swingIMG} max/>
+            <PageImage img={swingIMG} max="true"/>
             <MapWrapper>
             <Map/>
             </MapWrapper>

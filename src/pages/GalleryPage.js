@@ -81,69 +81,47 @@ const GalleryPage = () => {
 
     return (
         <GalleryWrapper>
-            <div className="container-fluid">
+            <Carousel infiniteLoop
+                      showThumbs={false}
+                      stopOnHover={true}
+                      centerMode
+                      interval={2000}
+                      autoPlay={true}
+                      dynamicHeight={true}
+                      centerSlidePercentage={window.screen.width > 768 ? 35 : 80}
+                      emulateTouch={true}
+                      swipeable={true}
+                      showArrows={true}>
+                {baseChildren.props.children}
+            </Carousel>
 
-                <div className="row gallery-carousel">
-                    <Carousel infiniteLoop
-                              showThumbs={false}
-                              stopOnHover={true}
-                              centerMode
-                              interval={2000}
-                              autoPlay={true}
-                              dynamicHeight={true}
-                              centerSlidePercentage={window.screen.width > 768 ? 35 : 80}
-                              emulateTouch={true}
-                              swipeable={true}
-                              showArrows={true}>
-                        {baseChildren.props.children}
-                    </Carousel>
-                </div>
-
-                <div>
-                    <Title text="Budy dla psów" desc="Wygodne budy dla naszych pupilów. Wszystko jest robione pod indywidualne potrzeby i rozmiary zwierząt."/>
-                </div>
-                <GalleryRow arr={[buda1, buda2, buda3, buda4]}/>
+                <Title text="Budy dla psów"
+                       desc="Wygodne budy dla naszych pupilów. Wszystko jest robione pod indywidualne potrzeby i rozmiary zwierząt."/>
+            <GalleryRow arr={[buda1, buda2, buda3, buda4]}/>
 
 
-                <div>
-                    <Title text="Place zabaw" desc="Plac zabaw idealny dla małych dzieci. Rozmiary, atrakcje i inne szczegóły do ustalenia."/>
-                </div>
-                <GalleryRow arr={[plac1, plac2, plac3, plac4]}/>
+                <Title text="Place zabaw"
+                       desc="Plac zabaw idealny dla małych dzieci. Rozmiary, atrakcje i inne szczegóły do ustalenia."/>
+            <GalleryRow arr={[plac1, plac2, plac3, plac4]}/>
 
-                <div>
-                    <Title text="Altany" desc="Drewniane i solidne altany, które pomieszczą duzą grupę ludzi. Idealne pomieszczenie na letnie imprezy."/>
-                </div>
-                <GalleryRow arr={[altana1, altana2, altana3, altana4]}/>
+                <Title text="Altany"
+                       desc="Drewniane i solidne altany, które pomieszczą duzą grupę ludzi. Idealne pomieszczenie na letnie imprezy."/>
+            <GalleryRow arr={[altana1, altana2, altana3, altana4]}/>
 
-                <div>
-                    <Title text="Pozostałe meble ogrodowe" desc="Krzesła, ławki, hamaki, huśtawki, doniczki, łóżka, toalety zewnętrzne, zabudowy drewniane oraz parkiety."/>
-                </div>
-                <GalleryRow arr={[pozostale1, pozostale2, pozostale4, pozostale5]}/>
-                <GalleryRow arr={[pozostale3, pozostale6, pozostale7, pozostale8]}/>
+                <Title text="Pozostałe meble ogrodowe"
+                       desc="Krzesła, ławki, hamaki, huśtawki, doniczki, łóżka, toalety zewnętrzne, zabudowy drewniane oraz parkiety."/>
+            <GalleryRow arr={[pozostale1, pozostale2, pozostale4, pozostale5]}/>
+            <GalleryRow arr={[pozostale3, pozostale6, pozostale7, pozostale8]}/>
 
-            </div>
         </GalleryWrapper>
     );
 };
 
 const GalleryWrapper = styled.div`
 
-.zoom {
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-}
-
-.zoom img{
+  display: flex;
   width: 100%;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.zoom img:hover {
- transform: scale(1.2);
-}
+  flex-flow: column nowrap;
 `;
 
 export default GalleryPage;

@@ -54,6 +54,10 @@ justify-content: flex-end;
 margin: 10vh 10vw;
 width: 30vw;
 
+.text-center{
+  text-align: center;
+}
+
 @media (max-width: 768px){
   width: 80vw;
 }
@@ -79,7 +83,6 @@ hr {
 
 .line{
   margin-top: 2rem;
-  display: block;
   text-align: center;
 }
 

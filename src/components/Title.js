@@ -20,6 +20,10 @@ hr {
   border: 1px solid var(--primaryColor);
   margin: 2rem 5rem;
 }
+
+p {
+  padding: 0 0.6rem;
+}
 `;
 
 export default Title;

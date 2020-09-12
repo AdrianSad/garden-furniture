@@ -42,10 +42,7 @@ animation: animateright 0.4s;
   color: ${props => props.fixed ? "var(--primaryColor)" : "var(--mainWhite)"};
   font-weight: bold;
   text-shadow: ${props => props.fixed ? "none" : "1px 1px var(--mainBlack)"};
-  
-  &:hover, &:active{
-    text-decoration: none;
-  }
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

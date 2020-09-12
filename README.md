@@ -1,6 +1,8 @@
 # Garden Furniture
 
-Responsive web application written with ReactJS.
+Responsive web application written with ReactJS using hooks.
+
+The responsive effect achieved by flexbox. (without bootstrap)
 
 ## Getting app
 
@@ -18,7 +20,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Technologies used :
 - React, React Router
-- Bootstrap
 - HTML, CSS
 - npm
 
